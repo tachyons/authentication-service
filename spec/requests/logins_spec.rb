@@ -15,7 +15,7 @@ RSpec.describe 'Login', type: :request do
       post sessions_path, params: { email: 'test@example.com', password: 'pass@word' }, as: :json
       token = response.parsed_body['auth_token']
       payload = JWT.decode(token, Rails.application.credentials.secret_key_base)[0]
-      expect(payload['user_id']).to be_eql(@user.id)
+      expect(payload['user_id']).to be_eql(@user.id) # rubocop:disable RSpec/InstanceVariable
     end
 
     context 'with invalid credentials' do

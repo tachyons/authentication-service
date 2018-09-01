@@ -3,3 +3,20 @@ inherit_from: .rubocop_todo.yml
 
 Style/Documentation:
   Enabled: false
+
+RSpec/MultipleExpectations:
+  Max: 3
+
+AllCops:
+  TargetRubyVersion: 2.5
+  Exclude:
+    - 'vendor/**/*'
+    - 'db/**/*'
+    - 'tmp/**/*'
+    - 'bin/**/*'
+    - 'node_modules/**/*'
+    - spec/rails_helper.rb
+    - spec/spec_helper.rb
+    - Guardfile
+    - config/application.rb
+    - db/schema.rb

@@ -9,4 +9,13 @@ RSpec.describe 'Users', type: :request do
       expect(response).to have_http_status(200)
     end
   end
+
+  describe 'Get logged in user details' do
+    let(:user) { create(:user) }
+
+    it 'returns user record' do
+      get me_users_path, headers: valid_headers, as: :json
+      expect(response).to have_http_status(200)
+    end
+  end
 end
