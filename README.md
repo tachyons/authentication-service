@@ -1,6 +1,6 @@
 # Authentication Service [![Build Status](https://travis-ci.org/tachyons/authentication-service.svg?branch=master)](https://travis-ci.org/tachyons/authentication-service)
 
-Description of your what your project does.
+Authentication microservice written in Rails with JWT.
 
 ## Developer Setup
 
