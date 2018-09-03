@@ -1,24 +1,15 @@
-# README
+# Authentication Service [![Build Status](https://travis-ci.org/tachyons/authentication-service.svg?branch=master)](https://travis-ci.org/tachyons/authentication-service)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Description of your what your project does.
 
-Things you may want to cover:
+## Developer Setup
 
-* Ruby version
+1. Install Ruby 2.5. (It is suggested to use a Ruby version manager such as [rbenv](https://github.com/rbenv/rbenv#installation) and then to [install Ruby 2.5](https://github.com/rbenv/rbenv#installing-ruby-versions)).
+1. Install Bundler to manager dependencies: `gem install bundler`
+1. Setup the database: `bundle exec rake db:migrate`
+1. Start the application: `bundle exec rails s`
 
-* System dependencies
+## Commands
+- `bundle exec rubocop` - Run the full suite of linters on the codebase.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Deployment Instructions
