@@ -25,3 +25,6 @@
 # Database configuration
 /config/database.yml
 coverage
+
+# Private key
+config/private.pem
