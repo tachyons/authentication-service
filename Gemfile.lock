@@ -53,6 +53,7 @@ GEM
     concurrent-ruby (1.0.5)
     crass (1.0.4)
     diff-lcs (1.3)
+    docile (1.1.5)
     erubi (1.7.1)
     factory_bot (4.10.0)
       activesupport (>= 3.0.0)
@@ -69,6 +70,7 @@ GEM
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.1)
+    json (2.1.0)
     jwt (2.1.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -103,6 +105,7 @@ GEM
       pry (~> 0.10)
     puma (3.12.0)
     rack (2.0.5)
+    rack-cors (1.0.2)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (5.2.1)
@@ -163,6 +166,11 @@ GEM
       rubocop (>= 0.56.0)
     ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
+    simplecov (0.15.1)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.2)
     spring (2.0.2)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
@@ -199,9 +207,11 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   pry-byebug
   puma (~> 3.11)
+  rack-cors
   rails (~> 5.2.1)
   rspec-rails (~> 3.7)
   rubocop-rspec
+  simplecov
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data
