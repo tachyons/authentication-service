@@ -4,6 +4,8 @@ addons:
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database travis_ci_test;' -U postgres
+  - openssl genrsa  -out config/private.pem 2048
+  - openssl rsa -in config/private.pem -outform PEM -pubout -out config/public.pem
 dist: trusty
 language: ruby
 rvm:
