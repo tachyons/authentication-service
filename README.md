@@ -18,3 +18,7 @@ Authentication microservice written in Rails with JWT.
 - `bundle exec rubocop` - Run the full suite of linters on the codebase.
 
 ## Deployment Instructions
+
+## Documentation
+
+[Apiary](https://authservice16.docs.apiary.io)
