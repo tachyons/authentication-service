@@ -1,4 +1,4 @@
-# Authentication Service 
+# Authentication Service
 [![Build Status](https://travis-ci.org/tachyons/authentication-service.svg?branch=master)](https://travis-ci.org/tachyons/authentication-service)
 [![Maintainability](https://api.codeclimate.com/v1/badges/3adc43f3947f68b4f44b/maintainability)](https://codeclimate.com/github/tachyons/authentication-service/maintainability)
 
@@ -21,6 +21,19 @@ Authentication microservice written in Rails with JWT.
 
 ## Deployment Instructions
 
+## TODO
+
 ## Documentation
 
 [Apiary](https://authservice16.docs.apiary.io)
+
+## Features
+
+  * [x] User creation from admin role
+  * [x] Login using email and password
+  * [x] Authenticate using auth token
+  * [x] Endpont for public key
+  * [ ] Refresh token
+  * [ ] Revoking refresh token
+  * [ ] Broadcast auth events like user deletion
+  * [ ] Support key rotation
