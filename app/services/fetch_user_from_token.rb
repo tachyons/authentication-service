@@ -9,10 +9,9 @@ class FetchUserFromToken
   def call
     raise MissingAuthHeader unless @header.present?
     begin
-      token = JsonWebToken.decode(auth_header).first
+      token, = JsonWebToken.decode(auth_header)
     rescue JWT::DecodeError => e
-      Rails.logger.info e.message
-      raise InvalidToken e.message
+      raise InvalidToken, e.message
     end
     raise InvalidToken unless JsonWebToken.valid_payload(token)
     User.find(token['user_id'])
