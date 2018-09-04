@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def me
-    render json: UserSerializer.new(@current_user)
+    render json: UserSerializer.new(current_user)
   end
 
   private
@@ -21,6 +21,6 @@ class UsersController < ApplicationController
   end
 
   def ensure_admin_user
-    head(:unauthorised) && return unless @current_user.admin?
+    head(:unauthorised) && return unless current_user.admin?
   end
 end

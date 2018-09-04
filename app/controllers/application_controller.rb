@@ -3,6 +3,8 @@ class ApplicationController < ActionController::API
 
   protected
 
+  attr_reader :current_user
+
   def authenticate_user
     @current_user = FetchUserFromToken.new(request.headers['Authorization']).call
   rescue FetchUserFromToken::InvalidToken
