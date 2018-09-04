@@ -4,9 +4,10 @@ class ApplicationController < ActionController::API
   protected
 
   def authenticate_user
-    auth_header = request.headers['Authorization'].split(' ').last if request.headers['Authorization'].present?
-    raise 'Missing auth header' unless auth_header
-    token = JsonWebToken.decode(auth_header)[0]
-    @current_user = User.find(token['user_id'])
+    @current_user = FetchUserFromToken.new(request.headers['Authorization']).call
+  rescue FetchUserFromToken::InvalidToken
+    render json: { message: 'Authentication Token is invalid' }, status: :unauthorised
+  rescue FetchUserFromToken::MissingAuthHeader
+    render json: { message: 'Authentication header is missing' }, status: :unauthorised
   end
 end

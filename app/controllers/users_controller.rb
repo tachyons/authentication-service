@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :authenticate_user, only: [:create]
+  before_action :ensure_admin_user, only: :create
 
   def create
     user = User.new(user_params)
@@ -18,5 +18,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password)
+  end
+
+  def ensure_admin_user
+    head(:unauthorised) && return unless @current_user.admin?
   end
 end
