@@ -1,4 +1,6 @@
-# Authentication Service [![Build Status](https://travis-ci.org/tachyons/authentication-service.svg?branch=master)](https://travis-ci.org/tachyons/authentication-service)
+# Authentication Service 
+[![Build Status](https://travis-ci.org/tachyons/authentication-service.svg?branch=master)](https://travis-ci.org/tachyons/authentication-service)
+[![Maintainability](https://api.codeclimate.com/v1/badges/3adc43f3947f68b4f44b/maintainability)](https://codeclimate.com/github/tachyons/authentication-service/maintainability)
 
 Authentication microservice written in Rails with JWT.
 
